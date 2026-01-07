@@ -1,0 +1,595 @@
+---
+import MainLayout from '../layouts/main.astro';
+import { Phone, Facebook, Instagram, Mail, DollarSign, Car, Clock, Shield, Wallet } from 'lucide-react';
+import LanguageToggle from '../components/LanguageToggle';
+---
+
+<MainLayout>
+  <!-- Language Toggle -->
+  <LanguageToggle client:load />
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-[#1a1a1a] via-[#111] to-[#1a1a1a] text-white py-6 sm:py-8 px-4 text-center relative overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-red-600 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-gray-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+    </div>
+    <div class="relative z-10">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-3 leading-tight">IT TOWING LLC</h1>
+      <a href="tel:6023158892" class="text-xl sm:text-2xl md:text-3xl hover:text-red-500 transition-colors inline-flex items-center justify-center gap-2 mt-2 underline">
+        <Phone className="w-6 h-6 sm:w-7 sm:h-7" />
+        (602) 315-8892
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-12 sm:py-16 px-4 sm:px-5 max-w-5xl mx-auto text-center relative">
+    <!-- Modern Gradient Background -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-1/4 left-0 w-72 h-72 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+      <div class="absolute top-1/3 right-0 w-72 h-72 bg-gray-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+    </div>
+    
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-3 sm:mb-4 text-[#111] leading-tight">
+      <span data-en>Towing Service in Phoenix, AZ</span>
+      <span data-es>Servicio de Grúas en Phoenix, AZ</span>
+    </h2>
+    <p class="text-lg sm:text-xl md:text-2xl mb-2 font-semibold">
+      <span data-en><strong>Serving Phoenix, Laveen & Tempe</strong></span>
+      <span data-es><strong>Sirviendo a Phoenix, Laveen y Tempe</strong></span>
+    </p>
+    <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-gray-700">
+      <span data-en>Fast • Reliable • Local</span>
+      <span data-es>Rápido • Confiable • Local</span>
+    </p>
+    <a 
+      href="tel:6023158892" 
+      class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#c40000] to-[#900000] hover:from-[#a00000] hover:to-[#700000] active:from-[#900000] active:to-[#600000] text-white px-10 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl rounded-lg transition-all duration-300 font-button font-semibold shadow-lg hover:shadow-2xl min-h-[56px] mx-auto max-w-xs transform hover:scale-105"
+    >
+      <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+      <span data-en>Call Now</span>
+      <span data-es>Llamar Ahora</span>
+    </a>
+  </section>
+
+  <!-- Why Choose IT Towing Section -->
+  <section class="py-12 sm:py-16 px-4 sm:px-5 max-w-6xl mx-auto relative">
+    <!-- Modern Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-red-50 -z-10"></div>
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-1/4 left-0 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
+      <div class="absolute bottom-1/4 right-0 w-64 h-64 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-4 sm:mb-6 text-[#111] text-center">
+        <span data-en>Why Choose IT Towing Services?</span>
+        <span data-es>¿Por Qué Elegir IT Towing Services?</span>
+      </h2>
+      <p class="text-base sm:text-lg text-center mb-8 sm:mb-12 text-gray-700 max-w-3xl mx-auto">
+        <span data-en>
+          When you need towing or roadside assistance, you deserve service that's fast, reliable, and won't break the bank. 
+          That's exactly what IT Towing LLC delivers to Phoenix and surrounding areas.
+        </span>
+        <span data-es>
+          Cuando necesitas remolque o asistencia en carretera, mereces un servicio que sea rápido, confiable y asequible. 
+          Eso es exactamente lo que IT Towing LLC ofrece a Phoenix y áreas circundantes.
+        </span>
+      </p>
+
+      <!-- Stranded Vehicle Image -->
+      <div class="mb-8 sm:mb-12">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
+          <!-- Stranded vehicle image - Replace src with your actual image path -->
+          <img 
+            src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&h=600&fit=crop" 
+            alt="Stranded Vehicle Needing Towing Service in Phoenix, AZ"
+            class="w-full h-auto object-cover"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
+            <p class="text-xl sm:text-2xl md:text-3xl font-heading font-bold">
+              <span data-en>We're Here When You Need Us Most</span>
+              <span data-es>Estamos Aquí Cuando Más Nos Necesitas</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three Pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8">
+        <!-- Fast Service -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+          <div class="flex justify-center mb-4">
+            <div class="bg-gradient-to-br from-red-500 to-red-700 p-4 rounded-full">
+              <Clock className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+            </div>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-heading font-bold mb-3 text-[#111] text-center">
+            <span data-en>Fast Response</span>
+            <span data-es>Respuesta Rápida</span>
+          </h3>
+          <p class="text-base sm:text-lg text-gray-700 text-center leading-relaxed">
+            <span data-en>
+              We know emergencies don't wait. Our team arrives quickly to get you back on the road fast. 
+              Average response time: <strong>30 minutes or less</strong>.
+            </span>
+            <span data-es>
+              Sabemos que las emergencias no esperan. Nuestro equipo llega rápidamente para que vuelvas a la carretera. 
+              Tiempo de respuesta promedio: <strong>30 minutos o menos</strong>.
+            </span>
+          </p>
+        </div>
+
+        <!-- Reliable Service -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+          <div class="flex justify-center mb-4">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-full">
+              <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+            </div>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-heading font-bold mb-3 text-[#111] text-center">
+            <span data-en>Reliable & Professional</span>
+            <span data-es>Confiable y Profesional</span>
+          </h3>
+          <p class="text-base sm:text-lg text-gray-700 text-center leading-relaxed">
+            <span data-en>
+              Trust matters. We're fully licensed, insured, and experienced. 
+              Your vehicle is in <strong>safe hands</strong> with our professional team.
+            </span>
+            <span data-es>
+              La confianza importa. Tenemos licencia completa, seguro y experiencia. 
+              Tu vehículo está en <strong>manos seguras</strong> con nuestro equipo profesional.
+            </span>
+          </p>
+        </div>
+
+        <!-- Affordable Service -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+          <div class="flex justify-center mb-4">
+            <div class="bg-gradient-to-br from-green-500 to-green-700 p-4 rounded-full">
+              <Wallet className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+            </div>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-heading font-bold mb-3 text-[#111] text-center">
+            <span data-en>Affordable Rates</span>
+            <span data-es>Tarifas Asequibles</span>
+          </h3>
+          <p class="text-base sm:text-lg text-gray-700 text-center leading-relaxed">
+            <span data-en>
+              Quality service shouldn't cost a fortune. We offer <strong>competitive pricing</strong> 
+              with no hidden fees. Get the help you need without breaking the bank.
+            </span>
+            <span data-es>
+              Un servicio de calidad no debe costar una fortuna. Ofrecemos <strong>precios competitivos</strong> 
+              sin cargos ocultos. Obtén la ayuda que necesitas sin gastar de más.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-6 sm:p-8 shadow-inner">
+        <p class="text-lg sm:text-xl font-semibold mb-4 text-[#111]">
+          <span data-en>Experience the IT Towing difference today!</span>
+          <span data-es>¡Experimenta la diferencia de IT Towing hoy!</span>
+        </p>
+        <a 
+          href="tel:6023158892" 
+          class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#c40000] to-[#900000] hover:from-[#a00000] hover:to-[#700000] active:from-[#900000] active:to-[#600000] text-white px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-lg transition-all duration-300 font-button font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105"
+        >
+          <Phone className="w-5 h-5" />
+          <span data-en>Call Now: (602) 315-8892</span>
+          <span data-es>Llamar: (602) 315-8892</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cash for Junk Cars Section -->
+  <section class="py-12 sm:py-16 px-4 sm:px-5 max-w-5xl mx-auto bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 text-white relative overflow-hidden">
+    <!-- Modern Animated Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 30px 30px;"></div>
+      <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-yellow-400 rounded-full mix-blend-overlay filter blur-3xl animate-blob"></div>
+      <div class="absolute bottom-1/4 left-1/4 w-64 h-64 bg-green-400 rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-2000"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="flex items-center justify-center mb-4 sm:mb-6">
+        <DollarSign className="w-12 h-12 sm:w-16 sm:h-16 animate-bounce" />
+        <Car className="w-12 h-12 sm:w-16 sm:h-16 ml-2" />
+      </div>
+      
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4 sm:mb-6 leading-tight">
+        <span data-en>💰 CASH FOR JUNK CARS 💰</span>
+        <span data-es>💰 DINERO POR CARROS CHATARRA 💰</span>
+      </h2>
+      
+      <p class="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 font-semibold">
+        <span data-en>Get PAID for Your Old, Broken, or Unwanted Vehicle!</span>
+        <span data-es>¡Te PAGAMOS por Tu Vehículo Viejo, Descompuesto o No Deseado!</span>
+      </p>
+      
+      <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border-2 border-white/30 shadow-2xl">
+        <ul class="text-base sm:text-lg space-y-3 text-left max-w-2xl mx-auto">
+          <li class="flex items-start">
+            <span class="text-yellow-300 mr-3 text-2xl flex-shrink-0">✓</span>
+            <span>
+              <span data-en><strong>Top Dollar Paid</strong> - We offer competitive prices</span>
+              <span data-es><strong>Pagamos Bien</strong> - Ofrecemos precios competitivos</span>
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-yellow-300 mr-3 text-2xl flex-shrink-0">✓</span>
+            <span>
+              <span data-en><strong>Free Towing</strong> - We pick it up at no cost to you</span>
+              <span data-es><strong>Remolque Gratis</strong> - Lo recogemos sin costo</span>
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-yellow-300 mr-3 text-2xl flex-shrink-0">✓</span>
+            <span>
+              <span data-en><strong>Same Day Service</strong> - Fast and easy process</span>
+              <span data-es><strong>Servicio el Mismo Día</strong> - Proceso rápido y fácil</span>
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-yellow-300 mr-3 text-2xl flex-shrink-0">✓</span>
+            <span>
+              <span data-en><strong>Any Condition</strong> - Running or not, we buy it!</span>
+              <span data-es><strong>Cualquier Condición</strong> - ¡Funcione o no, lo compramos!</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+      
+      <p class="text-base sm:text-lg mb-6 sm:mb-8">
+        <span data-en>Don't let that old car sit and rust. Turn it into CASH today!</span>
+        <span data-es>No dejes que ese carro viejo se oxide. ¡Conviértelo en DINERO hoy!</span>
+      </p>
+      
+      <a 
+        href="tel:6023158892" 
+        class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 active:from-yellow-500 active:to-yellow-600 text-green-900 px-10 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl rounded-lg transition-all duration-300 font-button font-bold shadow-lg hover:shadow-2xl min-h-[56px] mx-auto max-w-xs transform hover:scale-105"
+      >
+        <DollarSign className="w-6 h-6" />
+        <span data-en>Call for Quote</span>
+        <span data-es>Llama por Cotización</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-12 sm:py-16 px-4 sm:px-5 max-w-5xl mx-auto relative">
+    <!-- Modern Gradient Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 -z-10"></div>
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-6 sm:mb-8 text-[#111] text-center sm:text-left">
+        <span data-en>Our Towing & Roadside Services</span>
+        <span data-es>Nuestros Servicios de Grúas y Asistencia en Carretera</span>
+      </h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-base sm:text-lg">
+        <li class="flex items-start py-2 bg-white/50 backdrop-blur-sm rounded-lg px-4 shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-[#c40000] mr-3 text-xl font-bold flex-shrink-0">•</span>
+          <span>
+            <span data-en>Local Towing</span>
+            <span data-es>Remolque Local</span>
+          </span>
+        </li>
+        <li class="flex items-start py-2 bg-white/50 backdrop-blur-sm rounded-lg px-4 shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-[#c40000] mr-3 text-xl font-bold flex-shrink-0">•</span>
+          <span>
+            <span data-en>Flatbed Towing</span>
+            <span data-es>Remolque de Plataforma</span>
+          </span>
+        </li>
+        <li class="flex items-start py-2 bg-white/50 backdrop-blur-sm rounded-lg px-4 shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-[#c40000] mr-3 text-xl font-bold flex-shrink-0">•</span>
+          <span>
+            <span data-en>Roadside Assistance</span>
+            <span data-es>Asistencia en Carretera</span>
+          </span>
+        </li>
+        <li class="flex items-start py-2 bg-white/50 backdrop-blur-sm rounded-lg px-4 shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-[#c40000] mr-3 text-xl font-bold flex-shrink-0">•</span>
+          <span>
+            <span data-en>Jump Starts</span>
+            <span data-es>Arranque de Batería</span>
+          </span>
+        </li>
+        <li class="flex items-start py-2 bg-white/50 backdrop-blur-sm rounded-lg px-4 shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-[#c40000] mr-3 text-xl font-bold flex-shrink-0">•</span>
+          <span>
+            <span data-en>Tire Changes</span>
+            <span data-es>Cambio de Llantas</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Service Area Section -->
+  <section class="py-12 sm:py-16 px-4 sm:px-5 max-w-5xl mx-auto relative">
+    <!-- Subtle Background Pattern -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-5">
+        <div class="w-full h-full" style="background-image: repeating-linear-gradient(45deg, #c40000 0, #c40000 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+      </div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-4 sm:mb-6 text-[#111] text-center sm:text-left">
+        <span data-en>Service Area</span>
+        <span data-es>Área de Servicio</span>
+      </h2>
+      <p class="text-base sm:text-lg mb-4 text-center sm:text-left">
+        <span data-en>We proudly provide towing services in:</span>
+        <span data-es>Con orgullo brindamos servicios de grúas en:</span>
+      </p>
+      <ul class="text-base sm:text-lg space-y-3">
+        <li class="flex items-start py-1">
+          <span class="text-[#c40000] mr-3 text-xl font-bold flex-shrink-0">•</span>
+          <span>Phoenix, AZ</span>
+        </li>
+        <li class="flex items-start py-1">
+          <span class="text-[#c40000] mr-3 text-xl font-bold flex-shrink-0">•</span>
+          <span>Laveen, AZ</span>
+        </li>
+        <li class="flex items-start py-1">
+          <span class="text-[#c40000] mr-3 text-xl font-bold flex-shrink-0">•</span>
+          <span>Tempe, AZ</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Business Hours Section -->
+  <section class="py-12 sm:py-16 px-4 sm:px-5 max-w-5xl mx-auto relative">
+    <!-- Modern Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100 to-white -z-10"></div>
+    
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-4 sm:mb-6 text-[#111] text-center sm:text-left">
+        <span data-en>Business Hours</span>
+        <span data-es>Horario de Atención</span>
+      </h2>
+      <div class="text-base sm:text-lg space-y-3 text-center sm:text-left bg-white/70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+        <p>
+          <strong>
+            <span data-en>Monday – Friday:</span>
+            <span data-es>Lunes – Viernes:</span>
+          </strong>
+          <span> 8:00 AM – 9:00 PM</span>
+        </p>
+        <p>
+          <strong>
+            <span data-en>Saturday – Sunday:</span>
+            <span data-es>Sábado – Domingo:</span>
+          </strong>
+          <span> 8:00 AM – 5:00 PM</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-12 sm:py-16 px-4 sm:px-5 max-w-5xl mx-auto relative">
+    <!-- Gradient Background -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-0 left-0 w-72 h-72 bg-gray-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+      <div class="absolute bottom-0 right-0 w-72 h-72 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-4 sm:mb-6 text-[#111] text-center sm:text-left">
+        <span data-en>About IT Towing LLC</span>
+        <span data-es>Acerca de IT Towing LLC</span>
+      </h2>
+      <p class="text-base sm:text-lg leading-relaxed text-center sm:text-left bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+        <span data-en>
+          IT Towing LLC is a locally owned towing company providing dependable,
+          professional towing and roadside assistance throughout Phoenix,
+          Laveen, and Tempe, Arizona. We focus on fast response times,
+          safe vehicle handling, and honest service.
+        </span>
+        <span data-es>
+          IT Towing LLC es una empresa de grúas de propiedad local que brinda 
+          asistencia confiable y profesional de remolque y carretera en Phoenix, 
+          Laveen y Tempe, Arizona. Nos enfocamos en tiempos de respuesta rápidos, 
+          manejo seguro de vehículos y servicio honesto.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-12 sm:py-16 px-4 sm:px-5 max-w-5xl mx-auto text-center relative">
+    <!-- Modern Gradient Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-50 to-white -z-10"></div>
+    
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-4 sm:mb-6 text-[#111]">
+      <span data-en>Contact IT Towing LLC</span>
+      <span data-es>Contacta a IT Towing LLC</span>
+    </h2>
+    <p class="text-base sm:text-lg mb-6 sm:mb-8">
+      <span data-en>Need a tow or roadside help? Call now.</span>
+      <span data-es>¿Necesitas una grúa o asistencia en carretera? Llama ahora.</span>
+    </p>
+    <a 
+      href="tel:6023158892" 
+      class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#c40000] to-[#900000] hover:from-[#a00000] hover:to-[#700000] active:from-[#900000] active:to-[#600000] text-white px-10 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl rounded-lg transition-all duration-300 font-button font-semibold shadow-lg hover:shadow-2xl min-h-[56px] mx-auto max-w-xs transform hover:scale-105"
+    >
+      <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+      (602) 315-8892
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-[#1a1a1a] via-[#111] to-[#1a1a1a] text-white py-10 sm:py-12 px-4 sm:px-5 text-center relative overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-red-600 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gray-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+    </div>
+    
+    <div class="relative z-10">
+      <p class="text-lg sm:text-xl font-bold mb-3">IT TOWING LLC</p>
+      <p class="mb-3 text-sm sm:text-base">
+        <span data-en>Serving Phoenix, Laveen & Tempe, AZ</span>
+        <span data-es>Sirviendo a Phoenix, Laveen y Tempe, AZ</span>
+      </p>
+      <p class="mb-5 text-base sm:text-lg">
+        <a href="tel:6023158892" class="hover:text-red-500 transition-colors inline-flex items-center justify-center gap-2 underline">
+          <Phone className="w-5 h-5" />
+          (602) 315-8892
+        </a>
+      </p>
+      <p class="mb-6 text-sm sm:text-base leading-relaxed">
+        <span data-en>Mon–Fri: 8:00 AM – 9:00 PM</span>
+        <span data-es>Lun–Vie: 8:00 AM – 9:00 PM</span>
+        <br>
+        <span data-en>Sat–Sun: 8:00 AM – 5:00 PM</span>
+        <span data-es>Sáb–Dom: 8:00 AM – 5:00 PM</span>
+      </p>
+
+      <!-- Social Media Links -->
+      <div class="flex items-center justify-center gap-6 mb-6">
+        <a 
+          href="https://facebook.com/ittowingllc" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="hover:text-red-500 transition-all duration-300 transform hover:scale-110"
+          aria-label="Follow us on Facebook"
+        >
+          <Facebook className="w-7 h-7 sm:w-8 sm:h-8" />
+        </a>
+        <a 
+          href="https://instagram.com/ittowingllc" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="hover:text-red-500 transition-all duration-300 transform hover:scale-110"
+          aria-label="Follow us on Instagram"
+        >
+          <Instagram className="w-7 h-7 sm:w-8 sm:h-8" />
+        </a>
+        <a 
+          href="mailto:info@ittowingllc.com"
+          class="hover:text-red-500 transition-all duration-300 transform hover:scale-110"
+          aria-label="Email us"
+        >
+          <Mail className="w-7 h-7 sm:w-8 sm:h-8" />
+        </a>
+      </div>
+
+      <p class="text-xs sm:text-sm text-gray-400">
+        © {new Date().getFullYear()} IT Towing LLC. 
+        <span data-en>All Rights Reserved.</span>
+        <span data-es>Todos los Derechos Reservados.</span>
+      </p>
+    </div>
+  </footer>
+</MainLayout>
+
+<!-- SEO Meta Tags and Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "IT Towing LLC",
+  "telephone": "+1-602-315-8892",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Phoenix",
+    "addressRegion": "AZ",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Phoenix AZ", "Laveen AZ", "Tempe AZ"],
+  "openingHours": [
+    "Mo-Fr 08:00-21:00",
+    "Sa-Su 08:00-17:00"
+  ],
+  "serviceType": "Towing Service",
+  "sameAs": [
+    "https://facebook.com/ittowingllc",
+    "https://instagram.com/ittowingllc"
+  ]
+})} />
+
+<!-- Language Toggle CSS -->
+<style>
+  /* Hide Spanish by default */
+  [data-es] {
+    display: none;
+  }
+
+  /* Show English by default */
+  [data-en] {
+    display: inline;
+  }
+
+  /* When Spanish is active */
+  html[data-lang="es"] [data-es] {
+    display: inline;
+  }
+
+  html[data-lang="es"] [data-en] {
+    display: none;
+  }
+
+  /* Block display for headings and paragraphs */
+  h1 [data-en],
+  h1 [data-es],
+  h2 [data-en],
+  h2 [data-es],
+  p > [data-en],
+  p > [data-es] {
+    display: block;
+  }
+
+  html[data-lang="es"] h1 [data-es],
+  html[data-lang="es"] h2 [data-es],
+  html[data-lang="es"] p > [data-es] {
+    display: block;
+  }
+
+  html[data-lang="es"] h1 [data-en],
+  html[data-lang="es"] h2 [data-en],
+  html[data-lang="es"] p > [data-en] {
+    display: none;
+  }
+
+  /* Modern Animations */
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+</style>
